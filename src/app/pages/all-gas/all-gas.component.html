@@ -1,0 +1,33 @@
+<!-- all-gas.component.html -->
+
+<div class="gas-table-container">
+  <div class="intro">
+    <h1>Manage All Gas</h1>
+  </div>
+  <table *ngIf="!isError; else errorMessage" class="gas-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let gas of gas">
+        <td>{{ gas.id }}</td>
+        <td>{{ gas.type }}</td>
+        <td>{{ gas.price | currency }}</td>
+        <td class="action-cell">
+          <a [routerLink]="['/view-gas', gas.id]" class="action-link view-link">View</a>
+          <a [routerLink]="['/update-gas', gas.id]" class="action-link edit-link">Edit</a>
+          <a [routerLink]="['/delete-gas', gas.id]" class="action-link delete-link">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #errorMessage>
+  <h1 class="error-message">{{ errMsg }}</h1>
+</ng-template>

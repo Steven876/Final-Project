@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="intro">
+        <h1>Manage All Users</h1>
+      </div>
+    <table class="users-table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.email }}</td>
+                <td>{{ user.fname }}</td>
+                <td>{{ user.lname }}</td>
+                <td>{{ user.role }}</td>
+                <td class="action-cell">
+                    <a [routerLink]="['/view-user', user.id]" class="action-link view-link">View</a>
+                    <a [routerLink]="['/edit-user', user.id]" class="action-link edit-link">Edit</a>
+                    <a [routerLink]="['/delete-user', user.id]" class="action-link delete-link">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<ng-template #errorMessage >
+    <h1>{{errMsg}} </h1>
+</ng-template>

@@ -1,0 +1,24 @@
+<!-- update-gas.component.html -->
+
+<div class="container">
+    <h2 class="gas-id">Gas ID: {{ gas?.id }}</h2>
+    <form (ngSubmit)="updateGas()" #updateGasForm="ngForm">
+        <div class="form-group">
+            <label for="type">Gas Type</label>
+            <input type="text" name="type" id="type" [(ngModel)]="type" class="form-control" placeholder="Enter Gas Type" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" [(ngModel)]="price" class="form-control" placeholder="Enter Price" required>
+        </div>
+
+        <div class="form-group">
+            <label for="img">Gas Image</label>
+            <input type="file" name="img" id="img" (change)="onFileChange($event)" class="form-control-file">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a routerLink="/all-gas" class="back-link">Back</a>
+    </form>
+</div>

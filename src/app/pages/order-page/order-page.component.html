@@ -1,0 +1,33 @@
+<!-- order-page.component.html -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" *ngFor="let gas of selectedGases; let i = index">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img *ngIf="gas.img; else defaultImage" [src]="gas.img" class="card-img" alt="Gas Image">
+          <ng-template #defaultImage>
+            <img src="assets/images/default.jpg" class="card-img" alt="Default Image">
+          </ng-template>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ gas.type }}</h5>
+          <p class="card-text">Price: <span class="price">{{ gas.price | currency }}</span></p>
+          <label for="quantity-{{i}}">Quantity:</label>
+          <input type="number" id="quantity-{{i}}" [(ngModel)]="gas.quantity" (ngModelChange)="updateQuantity(i, $event)" min="1"><br>
+
+          <label for="phone">Phone: </label>
+          <input type="text" id="phone" name="phone" placeholder="Enter Contact #" required><br><br>
+
+          <label for="location">Location: </label>
+          <input type="text" id="location" name="location" placeholder="Enter Location" required><br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button class="btn btn-success" (click)="placeOrder()">Place Order</button>
+    <button class="btn btn-secondary cancel-button" (click)="cancelOrder()">Cancel</button>
+  </div>
+  
+</div>

@@ -1,0 +1,11 @@
+<!-- src/app/components/view-order/view-order.component.html -->
+<div class="order-details">
+  <h2>Order Details</h2>
+  <p><strong>Order ID:</strong> {{ order.id }}</p>
+  <p><strong>Customer Name:</strong> {{ order.customerName }}</p>
+  <p><strong>Customer Email:</strong> {{ order.customerEmail }}</p>
+  <p><strong>Gas Type:</strong> {{ order.gasType }}</p>
+  <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+  <p><strong>Total Price:</strong> {{ order.price | currency }}</p>
+  <a routerLink="/deliveries" class="back-link">Back</a>
+</div>

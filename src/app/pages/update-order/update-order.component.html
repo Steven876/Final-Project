@@ -1,0 +1,35 @@
+<!-- src/app/pages/update-order/update-order.component.html -->
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="order-form">
+  <div class="form-group">
+    <label for="customerName">Customer Name:</label>
+    <input id="customerName" formControlName="customerName" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="customerEmail">Customer Email:</label>
+    <input id="customerEmail" formControlName="customerEmail" type="email" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="gasType">Gas Type:</label>
+    <select id="gasType" formControlName="gasType" class="form-control">
+      <option *ngFor="let gas of gasTypes" [value]="gas.type">{{ gas.type }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" formControlName="quantity" type="number" min="1" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="price">Total Price:</label>
+    <input id="price" formControlName="price" type="number" class="form-control">
+  </div>
+
+  <div class="button-container">
+    <button type="submit" [disabled]="!orderForm.valid" class="btn btn-primary">Update Order</button>
+
+    <a routerLink="/deliveries" class="back-link">Back</a>
+  </div>
+</form>

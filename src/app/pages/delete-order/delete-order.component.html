@@ -1,0 +1,20 @@
+<!-- src/app/components/delete-order/delete-order.component.html -->
+<div class="container">
+  <h2 class="delete-order-title">Delete Order</h2>
+  <div class="delete-order-details" *ngIf="order">
+      <p>Are you sure you want to delete the following order?</p>
+      <p><strong>Order ID:</strong> {{ order.id }}</p>
+      <p><strong>Customer Name:</strong> {{ order.customerName }}</p>
+      <p><strong>Customer Email:</strong> {{ order.customerEmail }}</p>
+      <p><strong>Customer Phone:</strong> {{ order.phone }}</p>
+      <p><strong>Customer Location:</strong> {{ order.location }}</p>
+      <p><strong>Gas Type:</strong> {{ order.gasType }}</p>
+      <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+      <p><strong>Total Price:</strong> {{ order.price | currency }}</p>
+  </div>
+
+  <div class="delete-order-buttons">
+      <button class="delete-button" (click)="deleteOrder()">Delete</button>
+      <button class="cancel-button" (click)="router.navigate(['/deliveries'])">Cancel</button>
+  </div>
+</div>

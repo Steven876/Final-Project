@@ -1,0 +1,62 @@
+/* edit-user.component.css */
+
+/* Style for the form container */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for form labels */
+  .form-group label {
+    margin-bottom: 5px;
+  }
+  
+  /* Style for form inputs */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for the role select dropdown */
+  .form-control#role {
+    width: 100%;
+  }
+  
+  /* Style for the Save Changes button */
+  .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 85px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the Back button */
+  .back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-link:hover {
+    background-color: #5a6268;
+  }
+  

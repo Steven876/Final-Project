@@ -1,0 +1,18 @@
+<!-- view-user.component.html -->
+
+<div class="user-details-container">
+  <p class="user-details-heading" *ngIf="!isError; else errorMessage">User Details:</p>
+
+  <div *ngIf="user">
+    <p class="user-detail" ><b>Email:</b> {{ user.email }}</p>
+    <p class="user-detail"><b>First Name:</b> {{ user.fname }}</p>
+    <p class="user-detail"><b>Last Name:</b> {{ user.lname }}</p>
+    <p class="user-detail"><b>Role:</b> {{ user.role }}</p>
+  </div>
+
+  <ng-template #errorMessage>
+    <h1 class="error-message">{{ errMsg }}</h1>
+  </ng-template>
+
+  <a routerLink="/all-users" class="back-link">Back</a>
+</div>

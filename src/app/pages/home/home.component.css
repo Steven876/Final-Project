@@ -1,0 +1,200 @@
+/* General body styling */
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Intro section styling */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    color: #004080; /* Darker blue */
+    margin-bottom: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.intro p {
+    font-size: 1.2em;
+    color: black;
+}
+
+/* Card wrapper styling */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+/* Row styling for Flexbox */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+}
+
+/* Column styling */
+.col-sm-6 {
+    flex: 0 0 48%; /* Ensures two cards per row with some margin */
+    margin-bottom: 20px;
+}
+
+/* Card styling */
+.card {
+    width: 100%; /* Full width of the column */
+    max-width: 400px; /* Maximum width for each card */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image styling */
+.card-img {
+    width: 50%;
+    height: 200px; /* Reduced height for uniformity */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Card body styling */
+.card-body {
+    padding: 15px;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    color: #004080; /* Darker blue */
+}
+
+.card-text {
+    font-size: 1em;
+    color: black;
+    margin-bottom: 15px;
+}
+
+  
+  .price {
+    font-weight: bold;
+    color: #28a745; /* Highlight price in green */
+  }
+
+/* Button styling */
+.btn-primary {
+    background-color: #8b0000; /* Darker red */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #660000; /* Even darker red */
+}
+
+.btn-primary:active {
+    background-color: #440000; /* Darkest red */
+}
+
+/* Section divider styling */
+.section-divider {
+    width: 80%;
+    margin: 40px auto; /* Adds space around the divider */
+    border: 0;
+    border-top: 4px solid #004080; /* Darker blue */
+}
+
+
+/* Description wrapper styling */
+.description-wrapper {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Description item styling */
+.description-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Increased space between description items */
+}
+
+.desc-img-left, .desc-img-right {
+    display: flex;
+    align-items: center;
+    max-width: 1000px; /* Maximum width for each item */
+    padding: 0 15px;
+}
+
+.desc-img-left .desc-img {
+    order: 1;
+}
+
+.desc-img-left .desc-text {
+    order: 2;
+    text-align: left;
+    margin-left: 40px; /* Increased margin for spacing */
+}
+
+.desc-img-right .desc-img {
+    order: 2;
+}
+
+.desc-img-right .desc-text {
+    order: 1;
+    text-align: right;
+    margin-right: 40px; /* Increased margin for spacing */
+}
+
+.desc-img {
+    width: 400px; /* Increased width */
+    height: 400px; /* Increased height */
+    object-fit: cover;
+    border-radius: 20px; /* More rounded corners */
+}
+
+.desc-text {
+    max-width: 600px;
+}
+
+.desc-text h3 {
+    color: #004080; /* Darker blue */
+    margin-bottom: 10px;
+}
+
+.desc-text p {
+    color: #555;
+}

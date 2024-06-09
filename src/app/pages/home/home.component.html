@@ -1,0 +1,82 @@
+<br><br>
+<div class="container">
+  <div class="intro">
+    <h1>Welcome to Steve's Gas Supply Service</h1>
+    <p>We provide a variety of gas types to meet your needs. Browse our offerings and place your order with ease!</p>
+  </div><br>
+  <div class="card-wrapper">
+    <div class="row">
+      <div class="col-sm-6" *ngFor="let gas of gas">
+        <div class="card">
+          <img *ngIf="gas.img; else defaultImage" [src]="gas.img" class="card-img" alt="Gas Image">
+          <ng-template #defaultImage>
+            <img src="assets/images/default.jpg" class="card-img" alt="Default Image">
+          </ng-template>
+          <div class="card-body">
+            <h5 class="card-title">{{ gas.type }}</h5>
+            <p class="card-text">Price: <span class="price"> {{gas.price | currency }} </span> </p>
+            <button class="btn btn-primary" (click)="orderGas(gas)">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="section-divider">
+  <div class="description-wrapper">
+    <div class="description-item">
+      <div class="desc-img-left">
+        <img src="assets/images/gas1.jpg" alt="Gas 1 Image" class="desc-img">
+        <div class="desc-text">
+          <h3>IGL 25IB (11KG)</h3>
+          <p>This gas is suitable for various applications and provides excellent efficiency and performance. Ideal for both residential and commercial use.</p>
+        </div>
+      </div>
+    </div>
+    <div class="description-item">
+      <div class="desc-img-right">
+        <img src="assets/images/gas2.jpg" alt="Gas 2 Image" class="desc-img">
+        <div class="desc-text">
+          <h3>GasPro 25IB (11KG)</h3>
+          <p>This gas offers superior performance for industrial and residential needs, ensuring reliability and safety with every use.</p>
+        </div>
+      </div>
+    </div>
+    <div class="description-item">
+      <div class="desc-img-left">
+        <img src="assets/images/gas3.jpg" alt="Gas 3 Image" class="desc-img">
+        <div class="desc-text">
+          <h3>IGL 30IB (14KG)</h3>
+          <p>Ideal for industrial and residential use, offering high efficiency and excellent performance. Suitable for a wide range of applications.</p>
+        </div>
+      </div>
+    </div>
+    <div class="description-item">
+      <div class="desc-img-right">
+        <img src="assets/images/gas4.jpg" alt="Gas 4 Image" class="desc-img">
+        <div class="desc-text">
+          <h3>GasPro 30IB (14KG)</h3>
+          <p>Known for its high purity and efficiency, this gas is perfect for demanding applications where performance is critical.</p>
+        </div>
+      </div>
+    </div>
+    <div class="description-item">
+      <div class="desc-img-left">
+        <img src="assets/images/gas5.jpg" alt="Gas 5 Image" class="desc-img">
+        <div class="desc-text">
+          <h3>IGL 100IB (45KG)</h3>
+          <p>This gas is environmentally friendly and provides consistent performance, making it a reliable choice for large-scale operations.</p>
+        </div>
+      </div>
+    </div>
+    <div class="description-item">
+      <div class="desc-img-right">
+        <img src="assets/images/gas6.jpg" alt="Gas 6 Image" class="desc-img">
+        <div class="desc-text">
+          <h3>GasPro 100IB (45KG)</h3>
+          <p>Provides excellent performance for both residential and industrial applications, ensuring high efficiency and safety.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

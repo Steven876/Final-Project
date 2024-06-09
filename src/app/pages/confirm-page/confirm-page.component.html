@@ -1,0 +1,16 @@
+<!-- confirm-page.component.html -->
+
+<div class="container">
+  <h2 class="confirmation-heading">Order Confirmation</h2>
+  <div *ngIf="order" class="order-details">
+    <p><strong>Order ID:</strong> {{ order.id }}</p>
+    <p><strong>Customer Name:</strong> {{ order.customerName }}</p>
+    <p><strong>Customer Email:</strong> {{ order.customerEmail }}</p>
+    <p><strong>Gas Type:</strong> {{ order.gasType }}</p>
+    <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+    <p><strong>Total Price:</strong> {{ order.price | currency }}</p>
+    <p><strong>Phone:</strong> {{ order.phone }}</p>
+    <p><strong>Location:</strong> {{ order.location }}</p>
+    <a routerLink="/my-order" class="back-link">View Order</a>
+  </div>
+</div>

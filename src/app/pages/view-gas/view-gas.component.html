@@ -1,0 +1,15 @@
+<!-- view-gas.component.html -->
+
+<div *ngIf="gas" class="gas-container">
+  <div class="card">
+    <div class="gas-info">
+      <h2 class="gas-id">Gas ID: {{ gas.id }}</h2>
+      <h2 class="gas-type">Type: {{ gas.type }}</h2>
+      <p class="gas-price">Price: {{ gas.price | currency }}</p>
+    </div>
+    <div class="gas-image">
+      <img [src]="gas.img ? gas.img : 'assets/images/default.jpg'" class="card-img" alt="Gas Image">
+    </div>
+    <a routerLink="/all-gas" class="back-link">Back</a>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<!-- delete-gas.component.html -->
+
+<div class="container">
+    <h2 class="gas-id">Gas ID: {{ gas?.id }}</h2>
+    <div *ngIf="gas">
+        <div class="card">
+            <div class="gas-image">
+                <img *ngIf="gas.img" [src]="'http://localhost:8888/uploads/' + gas.img" class="card-img" alt="Gas Image">
+                <img *ngIf="!gas.img" src="assets/images/default.jpg" class="card-img" alt="Default Image">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Gas Type: {{ gas.type }}</h5>
+                <p class="card-text">Price: {{ gas.price | currency }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <a routerLink="/all-gas" class="back-link">Back</a>
+        <form (ngSubmit)="deleteGas()" #deleteGasForm="ngForm" class="delete-form">
+            <button type="submit" class="delete-button">Delete</button>
+        </form>
+    </div>
+</div>

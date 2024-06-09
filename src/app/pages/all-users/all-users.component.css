@@ -1,0 +1,83 @@
+/* Update the existing CSS or add new CSS */
+
+.container {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.users-table th,
+.users-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+}
+
+.users-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.users-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.action-cell {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+/* Action link styling */
+.action-link {
+    color: white; /* White text */
+    text-decoration: none;
+    padding: 5px 10px; /* Padding inside the box */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Inline-block for proper box appearance */
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-link.view-link {
+    background-color: #007bff; /* Blue background */
+  }
+  
+  .action-link.edit-link {
+    background-color: #ffc107; /* Yellow background */
+  }
+  
+  .action-link.delete-link {
+    background-color: #dc3545; /* Red background */
+  }
+  
+  .action-link:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  

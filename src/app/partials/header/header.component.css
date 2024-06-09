@@ -1,0 +1,57 @@
+/* Style the header container */
+/* .header-container {
+    
+} */
+
+/* Style the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Style the header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+/* Style the logo container */
+.logo-container {
+    flex: 1; /* Take up remaining space */
+}
+
+/* Style the logo */
+.logo {
+    width: 35%;
+}
+
+/* Style the navigation links container */
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the navigation links */
+.header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0 20px; /* Add padding on left and right */
+}
+
+.nav-container .logout-button {
+    background-color: #000 !important; /* Important to override other styles */
+    color: #fff !important; /* Important to override other styles */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 20px; /* Add margin to separate from links */
+}
+
+.nav-container .logout-button:hover {
+    background-color: #333 !important; /* Important to override other styles */
+}
